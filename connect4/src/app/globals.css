@@ -1,0 +1,235 @@
+/* global.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 214, 219, 220;
+    --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --foreground-rgb: 255, 255, 255;
+        --background-start-rgb: 0, 0, 0;
+        --background-end-rgb: 0, 0, 0;
+    }
+}
+
+body {
+    color: rgb(var(--foreground-rgb));
+    background: linear-gradient(to bottom,
+            transparent,
+            rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+    .text-balance {
+        text-wrap: balance;
+    }
+}
+
+/* ConnectFour styles */
+.menu {
+    /* Your menu styles */
+}
+
+#darkLayout {
+    background: rgba(0, 0, 0, .5);
+}
+
+#gridContainer {
+    display: grid;
+    grid-template: 1fr 6fr/1fr;
+    height: 530px;
+    width: 500px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.chipHolder {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px;
+    width: 100%;
+    justify-content: center;
+}
+
+.space {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #000;
+    background-color: gray;
+    cursor: pointer;
+}
+
+.chip {
+    width: 100%;
+    height: 100%;
+    background-color: red;
+    border-radius: 50%;
+}
+
+.gameBoard {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+}
+
+.settings {
+    text-align: center;
+    margin-top: 10%;
+    padding-top: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    color: white;
+}
+
+.sfxSettings {
+    /* Your SFX settings styles */
+}
+
+.restartButtonContainer {
+    /* Your restart button container styles */
+}
+
+body {
+    background: url("../../public/Images/background.jpg");
+}
+
+h1 {
+    margin-top: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: -5px;
+}
+
+#scoreBoard {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    margin-top: 2%;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+#scoreBoard>h2 {
+    margin-top: 10px;
+    font-family: arial narrow;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+#scoreBoard>button {
+    margin-top: 30px;
+    border-radius: 30px;
+    width: 50%;
+}
+
+.playerRepresentation {
+    height: 60px;
+    width: 60px;
+    margin-top: 10px;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.shortInfo {
+    border: 2px solid grey;
+    border-radius: 20px;
+    margin-top: 20%;
+    padding: 20px;
+}
+
+.shortInfo>p {
+    font-family: arial narrow;
+}
+
+.chipHolder>div {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: 1px solid black;
+    margin: 14px;
+    cursor: pointer;
+    transition: 1s ease-in-out;
+    position: relative;
+}
+
+.gameBoard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
+    border-radius: 20px;
+}
+
+.gameBoard>div {
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    margin: 14px;
+    margin-top: 20px !important;
+    transition: 1s ease-in-out;
+    padding: 0px;
+    background: white;
+}
+
+.chip,
+.selected {
+    height: 40px;
+    width: 40px;
+    border: 1px solid black;
+    border-radius: 50%;
+    position: absolute !important;
+    top: 0px;
+}
+
+.red {
+    background: #D93D3D;
+}
+
+.blue {
+    background: #3553ED;
+}
+
+.unclickable {
+    pointer-events: none;
+}
+
+.invisible {
+    display: none;
+}
+
+.taken {
+    background: black !important;
+}
+
+/* Small menu */
+.smlMenu {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 20px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+.smlMenu>div {
+    text-align: center;
+}
+
+.smlMenu>* {
+    color: white;
+}
+
+.smlMenu button {
+    width: 70%;
+    margin-top: 20px;
+    border-radius: 40px;
+}
