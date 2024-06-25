@@ -6,16 +6,26 @@
 		"dev": "next dev",
 		"build": "next build",
 		"start": "next start",
-		"lint": "next lint"
+		"lint": "next lint",
+		"postinstall": "sed -i '' '/sourceMappingURL/d' ./node_modules/bootstrap/dist/css/bootstrap.min.css"
 	},
 	"dependencies": {
+		"@google-ai/generativelanguage": "^2.5.0",
+		"@google/generative-ai": "^0.13.0",
+		"axios": "^1.7.2",
+		"bootstrap": "^5.3.3",
+		"cors": "^2.8.5",
+		"dotenv": "^16.4.5",
+		"express": "^4.19.2",
 		"next": "14.2.4",
 		"react": "^18",
 		"react-dom": "^18",
+		"socket.io": "^4.7.5",
+		"socket.io-client": "^4.7.5",
 		"use-sound": "^4.0.3"
 	},
 	"devDependencies": {
-		"@types/node": "^20",
+		"@types/node": "^20.14.8",
 		"@types/react": "^18",
 		"@types/react-dom": "^18",
 		"eslint": "^8",

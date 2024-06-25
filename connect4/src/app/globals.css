@@ -42,8 +42,10 @@ body {
 #gridContainer {
     display: grid;
     grid-template: 1fr 6fr/1fr;
-    height: 530px;
-    width: 500px;
+    height: 700px;
+    /* Increased the height */
+    width: 600px;
+    /* Increased the width */
     margin: 0 auto;
     margin-top: 20px;
 }
@@ -58,8 +60,10 @@ body {
 }
 
 .space {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    /* Increased the width */
+    height: 60px;
+    /* Increased the height */
     border: 1px solid #000;
     background-color: gray;
     cursor: pointer;
@@ -143,8 +147,9 @@ h1 {
 .shortInfo {
     border: 2px solid grey;
     border-radius: 20px;
-    margin-top: 20%;
-    padding: 20px;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    padding: 40px;
 }
 
 .shortInfo>p {
@@ -152,8 +157,10 @@ h1 {
 }
 
 .chipHolder>div {
-    height: 40px;
-    width: 40px;
+    height: 60px;
+    /* Increased the height */
+    width: 60px;
+    /* Increased the width */
     border-radius: 50%;
     border: 1px solid black;
     margin: 14px;
@@ -172,8 +179,10 @@ h1 {
 
 .gameBoard>div {
     border-radius: 50%;
-    height: 40px;
-    width: 40px;
+    height: 60px;
+    /* Increased the height */
+    width: 60px;
+    /* Increased the width */
     margin: 14px;
     margin-top: 20px !important;
     transition: 1s ease-in-out;
@@ -183,12 +192,19 @@ h1 {
 
 .chip,
 .selected {
-    height: 40px;
-    width: 40px;
+    height: 60px;
+    /* Increased the height */
+    width: 60px;
+    /* Increased the width */
     border: 1px solid black;
     border-radius: 50%;
     position: absolute !important;
     top: 0px;
+}
+
+.score {
+    position: relative;
+    bottom: 2rem;
 }
 
 .red {
@@ -232,4 +248,22 @@ h1 {
     width: 70%;
     margin-top: 20px;
     border-radius: 40px;
+}
+
+/* Theme-specific styles */
+.theme-classic .gameBoard>div {
+    background: white;
+}
+
+.theme-dark .gameBoard>div {
+    background: #333;
+}
+
+.theme-neon .gameBoard>div {
+    background: #0f0;
+    box-shadow: 0 0 10px #0f0;
+}
+
+.theme-neon .space {
+    border: 2px solid #0f0;
 }
